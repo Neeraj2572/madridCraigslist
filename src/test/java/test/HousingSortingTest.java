@@ -28,7 +28,6 @@ public class HousingSortingTest extends BaseTest {
         homePage.goToHousing();
     }
 
-
     @Test
     void verifySortingPriceAscending() {
         housingPage.sortBy("£ → £££");

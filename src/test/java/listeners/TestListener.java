@@ -6,25 +6,6 @@ import org.junit.jupiter.api.extension.ExtensionContext; // JUnit 5
 import org.junit.jupiter.api.extension.TestWatcher;      // JUnit 5
 import java.nio.file.Paths;
 
-//public class TestListener implements TestWatcher {
-//
-//    @Override
-//    public void testFailed(ExtensionContext context, Throwable cause) {
-//        // Get the test instance to access the Playwright Page object
-//        BaseTest testInstance = (BaseTest) context.getRequiredTestInstance();
-//        Page page = testInstance.page;
-//
-//        if (page != null) {
-//            String fileName = "screenshots/" + context.getDisplayName() + ".png";
-//            page.screenshot(new Page.ScreenshotOptions()
-//                    .setPath(Paths.get(fileName))
-//                    .setFullPage(true));
-//            System.out.println("Screenshot saved: " + fileName);
-//        }
-//    }
-//}
-
-
 
 public class TestListener implements TestWatcher {
     @Override

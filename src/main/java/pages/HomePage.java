@@ -40,4 +40,5 @@ public class HomePage extends BasePage {
         click(HOUSING_LINK);
         return new HomePage(page);
     }
+
 }

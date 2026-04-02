@@ -27,4 +27,5 @@ public class BaseTest {
         browser.close();
         playwright.close();
     }
+
 }

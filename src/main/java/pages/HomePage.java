@@ -25,18 +25,15 @@ public class HomePage extends BasePage {
         Locator currentLanguage = page.locator(LANGUAGE_CURRENT);
         Locator langLink = page.locator(LANGUAGE_LINK);
 
-        // Use a more resilient check for the current language
+        //  check for the current language
         String currentText = currentLanguage.innerText().trim();
-
         // Only click if we aren't already on the English version
-        // Tip: Ensure "English" matches exactly what is displayed on the UI toggle
         if (!currentText.equalsIgnoreCase("english")) {
             langLink.click();
-
             // Wait for the URL or a specific element to confirm the language swap
             page.waitForLoadState(LoadState.DOMCONTENTLOADED);
         }
-        return this; // Or new HomePage(page) if state changes significantly
+        return this;
     }
 
     public HomePage goToHousing() {
